@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Una Reserva Natural para cada Ciudad | Fundación Azara</title>
+  <meta name="description" content="Una propuesta de Claudio Bertonatti y Fundación Azara: que cada ciudad de Latinoamérica cuente con su propia reserva natural y cultural. Biodiversidad, salud y calidad de vida urbana." />
+  <meta name="keywords" content="reserva natural urbana, Claudio Bertonatti, Fundación Azara, biodiversidad, ciudades sustentables, parque natural municipal, Latinoamérica" />
+  <meta property="og:title" content="Una Reserva Natural para cada Ciudad" />
+  <meta property="og:description" content="La naturaleza y la cultura, de la mano. Una propuesta de Fundación Azara." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- Particles canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo" aria-label="Inicio">
+        <span class="logo-leaf">🌿</span>
+        <span class="logo-text">Reserva Urbana</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#por-que" id="nav-porque">¿Por qué?</a></li>
+        <li><a href="#ecosistemas" id="nav-eco">Ecosistemas</a></li>
+        <li><a href="#fauna-flora" id="nav-fauna">Fauna & Flora</a></li>
+        <li><a href="#como-crear" id="nav-como">Cómo Crear</a></li>
+        <li><a href="#casos" id="nav-casos">Casos</a></li>
+        <li><a href="#infraestructura" id="nav-infra">Infraestructura</a></li>
+        <li><a href="#sumate" class="nav-cta" id="nav-sumate">Sumate</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+        <span id="theme-icon">☀️</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="hero" aria-label="Sección principal">
+    <div class="hero-bg" id="hero-bg">
+      <img src="hero.png" alt="Ciudad fusionada con naturaleza – reserva natural urbana latinoamericana" class="hero-img" id="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        <span>Fundación Azara · Claudio Bertonatti</span>
+      </div>
+      <h1 class="hero-title reveal-up delay-1">
+        Una reserva natural<br/><em>para cada ciudad</em>
+      </h1>
+      <p class="hero-subtitle reveal-up delay-2">La naturaleza y la cultura, de la mano.</p>
+      <p class="hero-desc reveal-up delay-3">
+        Si cada municipio del mundo creara una reserva natural, sería una de las medidas más eficaces<br />
+        para combatir el cambio climático y mejorar la calidad de vida urbana.
+      </p>
+      <div class="hero-actions reveal-up delay-4">
+        <a href="#por-que" class="btn btn-primary" id="cta-explorar">
+          <span>Explorar propuesta</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#como-crear" class="btn btn-secondary" id="cta-crear">Cómo crear una reserva</a>
+      </div>
+      <div class="hero-stats reveal-up delay-5">
+        <div class="stat">
+          <span class="stat-num" data-target="2300">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Municipios en Argentina</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="10">0</span><span class="stat-suffix"> pasos</span>
+          <span class="stat-label">Para crear tu reserva</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="1">0</span><span class="stat-suffix"> ha</span>
+          <span class="stat-label">Superficie mínima necesaria</span>
+        </div>
+      </div>
+    </div>
+    <a href="#por-que" class="hero-scroll" aria-label="Ir a siguiente sección">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Descubrir</span>
+    </a>
+  </section>
+
+  <!-- SECCIÓN 1: ¿POR QUÉ CREAR RESERVAS URBANAS? -->
+  <section id="por-que" class="section benefits-section" aria-labelledby="s1-title">
+    <div class="section-bg-deco deco-1"></div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Argumentos</span>
+        <h2 id="s1-title" class="section-title">¿Por qué crear<br/><span class="gradient-text">reservas urbanas?</span></h2>
+        <p class="section-desc">Más allá de la flora y la fauna, los principales beneficiarios de una reserva urbana son las personas que vivimos en las ciudades.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card glass reveal-up delay-1" id="benefit-clima">
+          <div class="benefit-icon">🌡️</div>
+          <h3>Regulación climática</h3>
+          <p>Las reservas depuran el aire, regulan el microclima local y capturan carbono, mitigando el efecto isla de calor urbano.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill:88%"></div></div>
+          <span class="benefit-pct">88% reducción temperatura</span>
+        </div>
+        <div class="benefit-card glass reveal-up delay-2" id="benefit-salud">
+          <div class="benefit-icon">🧠</div>
+          <h3>Salud física y mental</h3>
+          <p>Espacios de esparcimiento, meditación y contacto con la naturaleza que mejoran el bienestar de millones de ciudadanos.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill:92%"></div></div>
+          <span class="benefit-pct">92% mejora bienestar</span>
+        </div>
+        <div class="benefit-card glass reveal-up delay-3" id="benefit-educacion">
+          <div class="benefit-icon">📚</div>
+          <h3>Educación ambiental</h3>
+          <p>"Aulas al aire libre" para establecimientos educativos y escenario más inmediato para la investigación científica local.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill:95%"></div></div>
+          <span class="benefit-pct">95% escuelas participantes</span>
+        </div>
+        <div class="benefit-card glass reveal-up delay-4" id="benefit-hidro">
+          <div class="benefit-icon">💧</div>
+          <h3>Control hídrico</h3>
+          <p>Estabilizan la dinámica hídrica, ayudan a prevenir inundaciones y funcionan como esponjas naturales para el agua de lluvia.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill:75%"></div></div>
+          <span class="benefit-pct">75% reducción inundaciones</span>
+        </div>
+        <div class="benefit-card glass reveal-up delay-5" id="benefit-economia">
+          <div class="benefit-icon">💼</div>
+          <h3>Economía local</h3>
+          <p>Generan empleo directo para guardaparques, guías y educadores, y potencian la economía de los barrios vecinos.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill:70%"></div></div>
+          <span class="benefit-pct">+70% turismo local</span>
+        </div>
+        <div class="benefit-card glass reveal-up delay-6" id="benefit-identidad">
+          <div class="benefit-icon">🏡</div>
+          <h3>Identidad y pertenencia</h3>
+          <p>La protección del paisaje silvestre refuerza el sentido de pertenencia y la identidad de la comunidad con su entorno.</p>
+          <div class="benefit-bar"><div class="benefit-fill" style="--fill:83%"></div></div>
+          <span class="benefit-pct">83% orgullo comunitario</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: ECOSISTEMAS URBANOS -->
+  <section id="ecosistemas" class="section ecosystems-section" aria-labelledby="s2-title">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Biodiversidad</span>
+        <h2 id="s2-title" class="section-title">Ecosistemas<br/><span class="gradient-text">urbanos</span></h2>
+        <p class="section-desc">Una diversidad sorprendente de ambientes puede encontrarse —o restaurarse— dentro de los límites de cualquier ciudad.</p>
+      </div>
+      <div class="ecosystems-grid">
+        <div class="eco-card reveal-up delay-1" id="eco-humedales" tabindex="0">
+          <div class="eco-img-wrap">
+            <img src="humedal.png" alt="Humedales urbanos al atardecer con aves acuáticas" loading="lazy" />
+            <div class="eco-overlay">
+              <p>Lagunas, bañados, arroyos, juncales y áreas ribereñas que albergan una biodiversidad extraordinaria y regulan el agua.</p>
+            </div>
+          </div>
+          <div class="eco-info">
+            <span class="eco-tag">💧 Acuático</span>
+            <h3>Humedales</h3>
+          </div>
+        </div>
+        <div class="eco-card reveal-up delay-2" id="eco-bosques" tabindex="0">
+          <div class="eco-img-wrap">
+            <div class="eco-placeholder" style="background: linear-gradient(135deg, #1a3a2a 0%, #2d6a4f 50%, #40916c 100%);">
+              <span class="eco-ph-icon">🌳</span>
+              <span class="eco-ph-label">Bosques ribereños</span>
+            </div>
+            <div class="eco-overlay">
+              <p>Selvas ribereñas y bosques nativos que conectan ecosistemas y albergan fauna autóctona de alto valor.</p>
+            </div>
+          </div>
+          <div class="eco-info">
+            <span class="eco-tag">🌿 Terrestre</span>
+            <h3>Bosques y selvas</h3>
+          </div>
+        </div>
+        <div class="eco-card reveal-up delay-3" id="eco-pastizales" tabindex="0">
+          <div class="eco-img-wrap">
+            <div class="eco-placeholder" style="background: linear-gradient(135deg, #4a7c59 0%, #81b29a 50%, #a7c4a0 100%);">
+              <span class="eco-ph-icon">🌾</span>
+              <span class="eco-ph-label">Pastizales nativos</span>
+            </div>
+            <div class="eco-overlay">
+              <p>Pastizales y matorrales autóctonos que ofrecen refugio a insectos, reptiles y aves de pastizal amenazados.</p>
+            </div>
+          </div>
+          <div class="eco-info">
+            <span class="eco-tag">🌱 Terrestre</span>
+            <h3>Pastizales</h3>
+          </div>
+        </div>
+        <div class="eco-card reveal-up delay-4" id="eco-riberas" tabindex="0">
+          <div class="eco-img-wrap">
+            <div class="eco-placeholder" style="background: linear-gradient(135deg, #023e8a 0%, #0096c7 50%, #90e0ef 100%);">
+              <span class="eco-ph-icon">🏞️</span>
+              <span class="eco-ph-label">Riberas fluviales</span>
+            </div>
+            <div class="eco-overlay">
+              <p>Costas y riberas de ríos y arroyos que actúan como corredores biológicos naturales en medio de la ciudad.</p>
+            </div>
+          </div>
+          <div class="eco-info">
+            <span class="eco-tag">🌊 Fluvial</span>
+            <h3>Riberas</h3>
+          </div>
+        </div>
+        <div class="eco-card reveal-up delay-5" id="eco-sitios" tabindex="0">
+          <div class="eco-img-wrap">
+            <div class="eco-placeholder" style="background: linear-gradient(135deg, #6d4c41 0%, #8d6e63 50%, #bcaaa4 100%);">
+              <span class="eco-ph-icon">🏛️</span>
+              <span class="eco-ph-label">Patrimonio cultural</span>
+            </div>
+            <div class="eco-overlay">
+              <p>Ruinas arqueológicas, sitios históricos y árboles emblemáticos que unen naturaleza e historia local.</p>
+            </div>
+          </div>
+          <div class="eco-info">
+            <span class="eco-tag">🏺 Cultural</span>
+            <h3>Sitios históricos</h3>
+          </div>
+        </div>
+        <div class="eco-card reveal-up delay-6" id="eco-corredores" tabindex="0">
+          <div class="eco-img-wrap">
+            <img src="corredor.png" alt="Corredor biológico urbano elevado con vegetación nativa" loading="lazy" />
+            <div class="eco-overlay">
+              <p>Conexiones verdes que permiten el movimiento de fauna entre parches de naturaleza aislados en la ciudad.</p>
+            </div>
+          </div>
+          <div class="eco-info">
+            <span class="eco-tag">🔗 Conectividad</span>
+            <h3>Corredores biológicos</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: FAUNA Y FLORA -->
+  <section id="fauna-flora" class="section fauna-section" aria-labelledby="s3-title">
+    <div class="section-bg-deco deco-2"></div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Vida silvestre</span>
+        <h2 id="s3-title" class="section-title">Fauna & Flora<br/><span class="gradient-text">nativa</span></h2>
+        <p class="section-desc">Las reservas urbanas son AICA —Áreas de Importancia para la Conservación de las Aves— y refugio de cientos de especies autóctonas.</p>
+      </div>
+      <div class="fauna-feature reveal-up delay-1">
+        <div class="fauna-main-img">
+          <img src="fauna.png" alt="Aves nativas argentinas en reserva urbana: Hornero, Cotorras, Benteveo" loading="lazy" />
+          <div class="fauna-badge-float glass">
+            <span>🦜</span> 
+            <div>
+              <strong>Áreas AICA</strong>
+              <small>Importancia para aves</small>
+            </div>
+          </div>
+        </div>
+        <div class="fauna-list">
+          <div class="fauna-item reveal-up delay-2" id="fauna-aves">
+            <div class="fauna-icon" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">🦜</div>
+            <div>
+              <h3>Aves</h3>
+              <p>Hornero, Cotorras, Benteveo, Cauquén Común, garzas, martines pescadores y decenas de migratorias de paso.</p>
+            </div>
+          </div>
+          <div class="fauna-item reveal-up delay-3" id="fauna-mariposas">
+            <div class="fauna-icon" style="background: linear-gradient(135deg, #fd79a8, #e84393);">🦋</div>
+            <div>
+              <h3>Mariposas e insectos</h3>
+              <p>Papilionidae, polinizadores nativos, escarabajos, libélulas y moscas florícolas esenciales para la biodiversidad.</p>
+            </div>
+          </div>
+          <div class="fauna-item reveal-up delay-4" id="fauna-mamiferos">
+            <div class="fauna-icon" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">🦊</div>
+            <div>
+              <h3>Mamíferos</h3>
+              <p>Murciélagos nativos (grandes controladores de insectos), comadrejas, zorros, carpinchos en áreas ribereñas.</p>
+            </div>
+          </div>
+          <div class="fauna-item reveal-up delay-5" id="fauna-flora-nativa">
+            <div class="fauna-icon" style="background: linear-gradient(135deg, #55efc4, #00b894);">🌿</div>
+            <div>
+              <h3>Flora nativa</h3>
+              <p>Algarrobos centenarios, selva ribereña, juncales, alerce costero, plantas autóctonas cultivadas en viveros propios.</p>
+            </div>
+          </div>
+          <div class="fauna-item reveal-up delay-6" id="fauna-anfibios">
+            <div class="fauna-icon" style="background: linear-gradient(135deg, #fdcb6e, #e17055);">🐸</div>
+            <div>
+              <h3>Anfibios y reptiles</h3>
+              <p>Ranas, sapos, tortugas acuáticas, lagartos y culebras que indican la salud del ecosistema urbano.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: CÓMO CREAR UNA RESERVA – TIMELINE -->
+  <section id="como-crear" class="section timeline-section" aria-labelledby="s4-title">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Guía práctica</span>
+        <h2 id="s4-title" class="section-title">Cómo crear<br/><span class="gradient-text">tu reserva</span></h2>
+        <p class="section-desc">Bertonatti propone 10 pasos fundamentales — accesibles para cualquier comunidad organizada, sin importar el tamaño del área.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-item reveal-left" id="step-1">
+          <div class="timeline-step">
+            <div class="step-num">01</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">🗺️</div>
+            <h3>Identificar el área</h3>
+            <p>Buscar tierras de dominio público o fiscal. Pueden ser pequeñas (¡incluso 1 hectárea!) o degradadas. Antiguos predios ferroviarios, cementerios o sitios históricos son candidatos ideales.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right" id="step-2">
+          <div class="timeline-step">
+            <div class="step-num">02</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">👥</div>
+            <h3>Formar un grupo de trabajo</h3>
+            <p>Confirmar el dominio del suelo y trabajar bajo el marco de una institución —ONG, museo, universidad— que le dé respaldo formal al proyecto.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left" id="step-3">
+          <div class="timeline-step">
+            <div class="step-num">03</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">🔬</div>
+            <h3>Relevar el área</h3>
+            <p>Conocer límites, superficie y realizar un inventario biológico completo: plantas, animales, ambientes presentes y potencial de restauración.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right" id="step-4">
+          <div class="timeline-step">
+            <div class="step-num">04</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">📷</div>
+            <h3>Registrar fotográficamente</h3>
+            <p>Obtener imágenes de calidad de paisajes y especies para comunicar el valor del área y gestionar su protección ante las autoridades.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left" id="step-5">
+          <div class="timeline-step">
+            <div class="step-num">05</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">📄</div>
+            <h3>Redactar un informe</h3>
+            <p>Documento breve (5-10 páginas) que explique la ubicación, los ambientes presentes, las especies detectadas y el potencial beneficio para la comunidad.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right" id="step-6">
+          <div class="timeline-step">
+            <div class="step-num">06</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">🏛️</div>
+            <h3>Gestión ante el Municipio</h3>
+            <p>Presentar el informe formalmente solicitando la declaración de "Parque Natural y Cultural Municipal" junto a un borrador de ordenanza.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left" id="step-7">
+          <div class="timeline-step">
+            <div class="step-num">07</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">📢</div>
+            <h3>Difusión pública</h3>
+            <p>Buscar el apoyo de la comunidad e instituciones a través de redes sociales, notas de adhesión y eventos de sensibilización local.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right" id="step-8">
+          <div class="timeline-step">
+            <div class="step-num">08</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">📰</div>
+            <h3>Involucrar a la prensa</h3>
+            <p>Invitar a periodistas y medios a conocer el área para difundir su valor natural, histórico y social en la comunidad local.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left" id="step-9">
+          <div class="timeline-step">
+            <div class="step-num">09</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">🤝</div>
+            <h3>Seguimiento político</h3>
+            <p>Reunirse con autoridades y concejales para explicar la propuesta, responder dudas y monitorear el avance del expediente.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right" id="step-10">
+          <div class="timeline-step">
+            <div class="step-num">10</div>
+          </div>
+          <div class="timeline-content glass">
+            <div class="step-icon">✅</div>
+            <h3>Sanción de la ordenanza</h3>
+            <p>Presenciar la votación e, informar a organismos provinciales y nacionales. ¡Luego comienza la segunda etapa: el plan de gestión, guardaparques e infraestructura!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: CASOS INSPIRADORES -->
+  <section id="casos" class="section cases-section" aria-labelledby="s5-title">
+    <div class="section-bg-deco deco-3"></div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Ejemplos reales</span>
+        <h2 id="s5-title" class="section-title">Casos<br/><span class="gradient-text">inspiradores</span></h2>
+        <p class="section-desc">Reservas urbanas y parques naturales municipales ya existentes en Argentina y Latinoamérica que demuestran que es posible.</p>
+      </div>
+      <div class="map-wrapper reveal-up delay-1">
+        <div class="map-container" id="latam-map" role="img" aria-label="Mapa interactivo de Latinoamérica con reservas urbanas">
+          <svg class="latam-svg" viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+            <!-- Simplified Latin America shape -->
+            <defs>
+              <radialGradient id="mapGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#2d6a4f;stop-opacity:0.3"/>
+                <stop offset="100%" style="stop-color:#1b4332;stop-opacity:0.1"/>
+              </radialGradient>
+            </defs>
+            <!-- Mexico -->
+            <ellipse cx="200" cy="130" rx="90" ry="40" fill="url(#mapGrad)" stroke="#40916c" stroke-width="1" opacity="0.6"/>
+            <text x="200" y="135" text-anchor="middle" fill="#74c69d" font-size="11" font-family="Inter">México</text>
+            <!-- Central America -->
+            <ellipse cx="220" cy="190" rx="40" ry="25" fill="url(#mapGrad)" stroke="#40916c" stroke-width="1" opacity="0.5"/>
+            <!-- Colombia/Venezuela -->
+            <ellipse cx="270" cy="270" rx="70" ry="45" fill="url(#mapGrad)" stroke="#40916c" stroke-width="1" opacity="0.6"/>
+            <text x="260" y="265" text-anchor="middle" fill="#74c69d" font-size="10" font-family="Inter">Colombia</text>
+            <!-- Brazil -->
+            <ellipse cx="330" cy="380" rx="110" ry="110" fill="url(#mapGrad)" stroke="#40916c" stroke-width="1" opacity="0.7"/>
+            <text x="330" y="385" text-anchor="middle" fill="#74c69d" font-size="13" font-family="Inter" font-weight="600">Brasil</text>
+            <!-- Peru/Bolivia -->
+            <ellipse cx="230" cy="390" rx="55" ry="60" fill="url(#mapGrad)" stroke="#40916c" stroke-width="1" opacity="0.5"/>
+            <text x="230" y="390" text-anchor="middle" fill="#74c69d" font-size="10" font-family="Inter">Perú</text>
+            <!-- Chile -->
+            <ellipse cx="230" cy="520" rx="25" ry="70" fill="url(#mapGrad)" stroke="#40916c" stroke-width="1" opacity="0.5"/>
+            <text x="230" y="525" text-anchor="middle" fill="#74c69d" font-size="10" font-family="Inter">Chile</text>
+            <!-- Ecuador -->
+            <ellipse cx="220" cy="310" rx="30" ry="25" fill="url(#mapGrad)" stroke="#40916c" stroke-width="1" opacity="0.5"/>
+            <!-- Argentina -->
+            <ellipse cx="295" cy="560" rx="60" ry="90" fill="url(#mapGrad)" stroke="#40916c" stroke-width="1.5" opacity="0.8"/>
+            <text x="295" y="560" text-anchor="middle" fill="#74c69d" font-size="12" font-family="Inter" font-weight="600">Argentina</text>
+
+            <!-- MAP PINS -->
+            <!-- Costanera Sur, Buenos Aires -->
+            <g class="map-pin" id="pin-costanera" transform="translate(300,590)" role="button" tabindex="0" aria-label="Reserva Ecológica Costanera Sur, Buenos Aires">
+              <circle cx="0" cy="0" r="10" fill="#52b788" opacity="0.3" class="pin-pulse"/>
+              <circle cx="0" cy="0" r="6" fill="#52b788"/>
+              <circle cx="0" cy="0" r="3" fill="white"/>
+            </g>
+            <!-- Ribera Norte, San Isidro -->
+            <g class="map-pin" id="pin-ribera" transform="translate(295,575)" role="button" tabindex="0" aria-label="Parque Natural Ribera Norte, San Isidro">
+              <circle cx="0" cy="0" r="10" fill="#74c69d" opacity="0.3" class="pin-pulse" style="animation-delay:0.5s"/>
+              <circle cx="0" cy="0" r="6" fill="#74c69d"/>
+              <circle cx="0" cy="0" r="3" fill="white"/>
+            </g>
+            <!-- Cerro Colorado, Córdoba -->
+            <g class="map-pin" id="pin-cordoba" transform="translate(280,545)" role="button" tabindex="0" aria-label="Reserva Natural Cerro Colorado, Córdoba">
+              <circle cx="0" cy="0" r="10" fill="#95d5b2" opacity="0.3" class="pin-pulse" style="animation-delay:1s"/>
+              <circle cx="0" cy="0" r="6" fill="#95d5b2"/>
+              <circle cx="0" cy="0" r="3" fill="white"/>
+            </g>
+            <!-- Laguna Nimez, El Calafate -->
+            <g class="map-pin" id="pin-calafate" transform="translate(270,620)" role="button" tabindex="0" aria-label="Laguna Nimez, El Calafate">
+              <circle cx="0" cy="0" r="10" fill="#b7e4c7" opacity="0.3" class="pin-pulse" style="animation-delay:1.5s"/>
+              <circle cx="0" cy="0" r="6" fill="#b7e4c7"/>
+              <circle cx="0" cy="0" r="3" fill="white"/>
+            </g>
+            <!-- Cascada de Peguche, Ecuador -->
+            <g class="map-pin" id="pin-ecuador" transform="translate(218,312)" role="button" tabindex="0" aria-label="Bosque Protector Cascada de Peguche, Ecuador">
+              <circle cx="0" cy="0" r="10" fill="#f4a261" opacity="0.3" class="pin-pulse" style="animation-delay:2s"/>
+              <circle cx="0" cy="0" r="6" fill="#f4a261"/>
+              <circle cx="0" cy="0" r="3" fill="white"/>
+            </g>
+            <!-- Humedal Córdoba, Colombia -->
+            <g class="map-pin" id="pin-colombia" transform="translate(260,268)" role="button" tabindex="0" aria-label="Humedal Córdoba, Bogotá, Colombia">
+              <circle cx="0" cy="0" r="10" fill="#e9c46a" opacity="0.3" class="pin-pulse" style="animation-delay:2.5s"/>
+              <circle cx="0" cy="0" r="6" fill="#e9c46a"/>
+              <circle cx="0" cy="0" r="3" fill="white"/>
+            </g>
+            <!-- Estrecho de Magallanes, Chile -->
+            <g class="map-pin" id="pin-chile" transform="translate(235,525)" role="button" tabindex="0" aria-label="Parque Estrecho de Magallanes, Chile">
+              <circle cx="0" cy="0" r="10" fill="#90be6d" opacity="0.3" class="pin-pulse" style="animation-delay:3s"/>
+              <circle cx="0" cy="0" r="6" fill="#90be6d"/>
+              <circle cx="0" cy="0" r="3" fill="white"/>
+            </g>
+          </svg>
+          <!-- Tooltip -->
+          <div class="map-tooltip" id="map-tooltip" role="tooltip"></div>
+        </div>
+        <div class="cases-list">
+          <h3 class="cases-list-title">Reservas destacadas</h3>
+          <div class="case-item glass reveal-up delay-2" id="case-costanera">
+            <div class="case-dot" style="background:#52b788"></div>
+            <div>
+              <strong>Reserva Ecológica Costanera Sur</strong>
+              <span>Buenos Aires, Argentina</span>
+            </div>
+          </div>
+          <div class="case-item glass reveal-up delay-3" id="case-ribera">
+            <div class="case-dot" style="background:#74c69d"></div>
+            <div>
+              <strong>Parque Natural Ribera Norte</strong>
+              <span>San Isidro, Buenos Aires</span>
+            </div>
+          </div>
+          <div class="case-item glass reveal-up delay-4" id="case-cordoba">
+            <div class="case-dot" style="background:#95d5b2"></div>
+            <div>
+              <strong>Reserva Natural y Cultural Cerro Colorado</strong>
+              <span>Córdoba, Argentina</span>
+            </div>
+          </div>
+          <div class="case-item glass reveal-up delay-5" id="case-moron">
+            <div class="case-dot" style="background:#b7e4c7"></div>
+            <div>
+              <strong>Reserva Natural Urbana de Morón</strong>
+              <span>Morón, Buenos Aires</span>
+            </div>
+          </div>
+          <div class="case-item glass reveal-up delay-6" id="case-nimez">
+            <div class="case-dot" style="background:#b7e4c7"></div>
+            <div>
+              <strong>Laguna Nimez</strong>
+              <span>El Calafate, Santa Cruz</span>
+            </div>
+          </div>
+          <div class="case-item glass reveal-up" id="case-peguche">
+            <div class="case-dot" style="background:#f4a261"></div>
+            <div>
+              <strong>Bosque Protector Cascada de Peguche</strong>
+              <span>Otavalo, Ecuador</span>
+            </div>
+          </div>
+          <div class="case-item glass reveal-up" id="case-cordoba-col">
+            <div class="case-dot" style="background:#e9c46a"></div>
+            <div>
+              <strong>Humedal Córdoba</strong>
+              <span>Bogotá, Colombia</span>
+            </div>
+          </div>
+          <div class="case-item glass reveal-up" id="case-magallanes">
+            <div class="case-dot" style="background:#90be6d"></div>
+            <div>
+              <strong>Parque Estrecho de Magallanes</strong>
+              <span>Punta Arenas, Chile</span>
+            </div>
+          </div>
+          <div class="case-item glass reveal-up" id="case-lago-lugano">
+            <div class="case-dot" style="background:#48cae4"></div>
+            <div>
+              <strong>Reserva Ecológica Lago Lugano</strong>
+              <span>Buenos Aires, Argentina</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: INFRAESTRUCTURA ECOLÓGICA -->
+  <section id="infraestructura" class="section infra-section" aria-labelledby="s6-title">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Equipamiento</span>
+        <h2 id="s6-title" class="section-title">Infraestructura<br/><span class="gradient-text">ecológica</span></h2>
+        <p class="section-desc">Una vez creada la reserva, comienza la segunda etapa: dotar al área de equipamiento que mejore la experiencia y proteja la biodiversidad.</p>
+      </div>
+      <div class="infra-grid">
+        <div class="infra-card glass reveal-up delay-1" id="infra-senderos">
+          <div class="infra-img-wrap">
+            <img src="sendero.png" alt="Sendero ecológico de madera en bosque nativo" loading="lazy" />
+            <div class="infra-badge">Educativo</div>
+          </div>
+          <div class="infra-info">
+            <span class="infra-icon">🚶</span>
+            <h3>Senderos y pasarelas</h3>
+            <p>Circuitos de madera que permiten recorrer los ambientes sin impacto, guiando al visitante por los puntos más destacados.</p>
+          </div>
+        </div>
+        <div class="infra-card glass reveal-up delay-2" id="infra-observatorio">
+          <div class="infra-img-wrap">
+            <div class="infra-placeholder" style="background:linear-gradient(135deg,#0d3b66,#1a6b8a,#52b7d8)">
+              <span class="infra-ph-icon">🔭</span>
+            </div>
+            <div class="infra-badge">Fauna</div>
+          </div>
+          <div class="infra-info">
+            <span class="infra-icon">🦅</span>
+            <h3>Miradores y observatorios</h3>
+            <p>Torres y plataformas elevadas que permiten observar aves, fauna acuática y paisajes sin perturbar a los animales.</p>
+          </div>
+        </div>
+        <div class="infra-card glass reveal-up delay-3" id="infra-centro">
+          <div class="infra-img-wrap">
+            <div class="infra-placeholder" style="background:linear-gradient(135deg,#2d6a4f,#40916c,#95d5b2)">
+              <span class="infra-ph-icon">🏫</span>
+            </div>
+            <div class="infra-badge">Interpretación</div>
+          </div>
+          <div class="infra-info">
+            <span class="infra-icon">🎓</span>
+            <h3>Centro de interpretación</h3>
+            <p>Edificio sustentable con exposiciones sobre biodiversidad local, historia del paisaje y propuestas de conservación.</p>
+          </div>
+        </div>
+        <div class="infra-card glass reveal-up delay-4" id="infra-ecoducto">
+          <div class="infra-img-wrap">
+            <div class="infra-placeholder" style="background:linear-gradient(135deg,#3d405b,#81b29a,#f4f1de)">
+              <span class="infra-ph-icon">🌉</span>
+            </div>
+            <div class="infra-badge">Conectividad</div>
+          </div>
+          <div class="infra-info">
+            <span class="infra-icon">🔗</span>
+            <h3>Ecoductos</h3>
+            <p>Pasos de fauna sobre o bajo calles y autopistas, permitiendo que la vida silvestre se mueva libremente entre parches verdes.</p>
+          </div>
+        </div>
+        <div class="infra-card glass reveal-up delay-5" id="infra-vivero">
+          <div class="infra-img-wrap">
+            <div class="infra-placeholder" style="background:linear-gradient(135deg,#588157,#a3b18a,#dad7cd)">
+              <span class="infra-ph-icon">🌱</span>
+            </div>
+            <div class="infra-badge">Restauración</div>
+          </div>
+          <div class="infra-info">
+            <span class="infra-icon">🌿</span>
+            <h3>Viveros nativos</h3>
+            <p>Producción de plantas autóctonas para restaurar el paisaje original y proveer material vivo para la educación ambiental.</p>
+          </div>
+        </div>
+        <div class="infra-card glass reveal-up delay-6" id="infra-señaletica">
+          <div class="infra-img-wrap">
+            <div class="infra-placeholder" style="background:linear-gradient(135deg,#774936,#a97c65,#e5c8a8)">
+              <span class="infra-ph-icon">🪧</span>
+            </div>
+            <div class="infra-badge">Comunicación</div>
+          </div>
+          <div class="infra-info">
+            <span class="infra-icon">📍</span>
+            <h3>Señalética ecológica</h3>
+            <p>Carteles informativos con materiales naturales que orientan, educan y generan identidad visual para la reserva.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: CTA FINAL -->
+  <section id="sumate" class="section cta-section" aria-labelledby="s7-title">
+    <div class="cta-bg">
+      <div class="cta-overlay"></div>
+      <div class="cta-particles"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content reveal-up">
+        <span class="section-tag">Acción</span>
+        <h2 id="s7-title" class="cta-title">
+          Cada ciudad merece<br/><em>su propia reserva natural</em>
+        </h2>
+        <p class="cta-desc">
+          La propuesta es clara, viable y urgente. No hacen falta grandes extensiones ni grandes presupuestos.<br/>
+          Hace falta voluntad, comunidad y amor por el lugar donde vivimos.
+        </p>
+        <div class="cta-actions">
+          <a href="https://fundacionazara.org.ar/reservas-naturales/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xl" id="btn-sumate">
+            <span>Sumarse al movimiento</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.fundacionazara.org.ar/img/libros/Una-reserva-natural-para-cada-ciudad-2021.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-xl" id="btn-propuesta">
+            <span>📥 Descargar propuesta</span>
+          </a>
+        </div>
+        <div class="cta-book glass">
+          <div class="book-cover">
+            <div class="book-spine"></div>
+            <div class="book-face">
+              <span class="book-icon">📗</span>
+              <div>
+                <strong>Una Reserva Natural<br/>para cada Ciudad</strong>
+                <em>Claudio Bertonatti</em>
+                <small>Fundación Azara</small>
+              </div>
+            </div>
+          </div>
+          <div class="book-info">
+            <p>"Si cada municipio del mundo creara una reserva, sería una de las medidas más eficaces e inmediatas para combatir los efectos del cambio climático a escala global."</p>
+            <span>— Claudio Bertonatti</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-leaf" aria-hidden="true">🌿</span>
+        <span>Reserva Urbana</span>
+      </div>
+      <p class="footer-credit">
+        Basado en el libro <em>"Una Reserva Natural para cada Ciudad"</em> de Claudio Bertonatti.<br/>
+        Publicado por <a href="https://fundacionazara.org.ar" target="_blank" rel="noopener noreferrer">Fundación Azara</a>.
+      </p>
+      <p class="footer-copy">© 2026 — Propuesta de conservación urbana para Latinoamérica</p>
+    </div>
+  </footer>
+
+  <!-- Sound toggle -->
+  <button class="sound-btn" id="sound-toggle" aria-label="Activar/desactivar sonidos ambientales" title="Sonidos ambientales">
+    <span id="sound-icon">🔇</span>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
